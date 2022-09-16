@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#3399ff">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <link href="img/logo.png" rel="shortcut icon" type="image/x-icon">
+
+    <title>WEB / lab1</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .container {
+            /*grid-template-columns: repeat(2, 1fr);*/
+            display: grid;
+            grid-template-areas: 'header header'
+                'figure limits'
+                'figure limits'
+                'res_table res_table'
+                'res_table res_table'
+                'res_table res_table'
+                'res_table res_table'
+                'footer footer';
+            grid-auto-rows: auto;
+            grid-auto-columns: 50%;
+            height: 100vh;
+
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .container>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item {
+            padding: 20px;
+            /* border: 1px solid rgb(0, 0, 0); */
+
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #579aff;
+            border: none;
+            border-radius: 0px 0px 100px 100px;
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: normal;
+            padding: 0px;
+            margin: 0px;
+            color: #ffffff;
+            font-family: 'Caveat';
+        }
+
+        .limits {
+            grid-area: limits;
+        }
+
+        .figure {
+            grid-area: figure;
+        }
+
+        .res_table {
+            grid-area: res_table;
+            font-family: 'Caveat';
+            margin: 10px 15px;
+        }
+
+        .footer {
+            grid-area: footer;
+            height: minmax(auto, 200px);
+            background-color: #579aff;
+            border: none;
+            padding: 0px;
+            color: #ffffff;
+            border-radius: 100px 100px 0px 0px;
+            font-family: 'Caveat';
+        }
+
+        .footer>* {
+            margin: 0px;
+
+        }
+
+
+        .footer img {
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+            margin: 15px 7px;
+            box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+        .footer img:hover {
+            box-shadow: 0px 0px 10px 3px rgba(67, 54, 248, 0.568);
+            box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.568);
+        }
+
+        /* input[type=submit] {
+            margin: 3px;
+            height: 35px;
+            width: 40px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #3399ff;
+        } */
+
+        .form-send input , .button_reset_table{
+            margin: 3px;
+            height: 55px;
+            width: 220px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #3399ff;
+        }
+
+        .text-error {
+            background-color: red;
+        }
+
+        table {
+            width: 85%;
+            overflow: hidden;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            border-radius: 50px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #000;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        thead th {
+            background-color: #579aff;
+            color: #fff;
+            text-align: center;
+        }
+
+        tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.068);
+        }
+
+        input[type=text] {
+            padding: 10px;
+            border-radius: 50px;
+            border: 3px solid #579aff;
+            outline: none;
+        }
+
+
+        @media screen and (min-width: 1024px) {}
+
+        @media screen and (min-width: 0px) and (max-width:900px) {
+            .container {
+                /*grid-template-columns: repeat(2, 1fr);*/
+                display: grid;
+                grid-template-areas: 'header header'
+                    'figure figure'
+                    'limits limits'
+                    'res_table res_table'
+                    'res_table res_table'
+                    'res_table res_table'
+                    'res_table res_table'
+                    'footer footer';
+                grid-auto-rows: auto;
+                grid-auto-columns: 50%;
+                height: 100vh;
+            }
+
+            .hidden {
+
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="item header">
+            <div class="name">
+                <h2>Полуянов Александр Михайлович</h2>
+            </div>
+            <div class="vatiant">
+                <h2>Вариант - 914</h2>
+            </div>
+        </div>
+
+        <div class="item limits">
+            <form name="input_form" class="validate_form" action="php/handler.php" method="post">
+
+                <div class="input">
+                    <!-- Ввод числа Х ограничен 2 символами
+            Желательно переписать под input type range -->
+                    <label for="x">Введите значение аргумента X: </label><br class="hidden"><br class="hidden">
+                    <input autocomplete="off" id="x" name="x_coordinate" type="text" minlength="1" maxlength="5" required
+                        placeholder="Введите число в диапазоне (-3:3)" tabindex="1" size="30" class="x field">
+                </div>
+                <br>
+                <div class="input">
+                    <!-- Ввод числа Y ограничен 2 символами
+                Желательно переписать под input type range -->
+                    <label for="y">Введите значение аргумента Y: </label><br class="hidden"><br class="hidden">
+                    <input autocomplete="off" id="y" name="y_coordinate" type="text" minlength="1" maxlength="5" required
+                        placeholder="Введите число в диапазоне (-5:3)" tabindex="2" size="30" class="y field">
+                </div>
+                <br>
+                <!-- <label for="form-R">Выберите значение аргумента R:</label> -->
+                <p>Выберите значение аргумента R:</p>
+               
+                <div id="form-R" class="input">
+                    <!-- Ввод числа R -->
+                    <input type="radio" name="r_coordinate" id="r1" class="r" name="value_R" value="1" >
+                    <label for="r1">1</label>
+
+                    <input type="radio" name="r_coordinate" id="r2" class="r" name="value_R" value="2">
+                    <label for="r2">2</label>
+
+                    <input type="radio" name="r_coordinate" id="r3" class="r" name="value_R" value="3" checked>
+                    <label for="r3">3</label>
+
+                    <input type="radio" name="r_coordinate" id="r4" class="r" name="value_R" value="4">
+                    <label for="r4">4</label>
+
+                    <input type="radio" name="r_coordinate" id="r5" class="r" name="value_R" value="5">
+                    <label for="r5">5</label>
+                </div>
+                <br>
+                <div class="form-send">
+                    <input type="submit" value="Отправить" class="button_send">
+                    <input type="reset" value="Очистить" class="button_reset"> <br>
+                    
+                </div>
+            </form>
+            <input type="button" value="Очистить таблицу" class="button_reset_table" id="reset_table">
+        </div>
+
+        <div class="item figure">
+            <div class="image">
+                <img src="img\areas.png" alt="areas.png">
+            </div>
+        </div>
+
+        <div class="item res_table">
+            <table id="result_table">
+                <thead>
+                    <tr>
+                        <th>Value X</th>
+                        <th>Value Y</th>
+                        <th>Value R</th>
+                        <th>Hit</th>
+                        <th>Current Time</th>
+                        <th>Script Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="item footer">
+            <div class="social">
+                <a href="http://github.uz"><img src="img\logo.png" alt="Contact"></a>
+                <!-- <a href="http://t.me/AlexPoluyanov"><img src="img\telegram.svg" alt="Logotype"></a> -->
+                <a href="http://se.ifmo.ru/courses/web"><img src="img\tsopa.jpg" alt="se.ifmo.ru"></a>
+                <a href="http://github.com/AlexPoluyanov/WEB-ITMO"><img src="img\github.jpg" alt="Git"></a>
+                <a href="docs\WEB1.pdf"><img src="img\report.png" alt="report"></a>
+            </div>
+            <p>© 2022 Alex Poluyanov. All rights reserved.</p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- подключение библиотеки JQuery для отправки POST запроса -->
+    <script src="js/main.js" ></script> 
+</body>
+
+</html>
