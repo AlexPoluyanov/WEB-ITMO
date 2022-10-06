@@ -36,9 +36,11 @@
 
 [Ссылка на работу](https://se.ifmo.ru/~s341473/)
 
-![Внешний вид готовой работы на ПК](https://github.com/AlexPoluyanov/WEB-ITMO/tree/main/WEB1/docs/desktop.png)
+### Внешний вид готовой работы на ПК
+<img src="https://i.ibb.co/71tX30c/WEB1-PC.png" alt="desktop.png" border="0" style="border-radius:15%;"></a>
 
-![Внешний вид готовой работы на телефоне](https://github.com/AlexPoluyanov/WEB-ITMO/tree/main/WEB1/docs/mobile.png)
+### Внешний вид готовой работы на мобильном устройстве
+<a href="https://ibb.co/LPNX90S"><img src="https://i.ibb.co/LPNX90S/mobile.png" alt="mobile" border="0"></a>
 
 ## Как загрузить лабораторную работу #1 на helios.cs.ifmo.ru:
 
