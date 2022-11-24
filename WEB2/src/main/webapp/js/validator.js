@@ -13,7 +13,7 @@ function validateX() {
 
 function validateY() {
     const valueY = parseFloat($("#value_Y").val().replace(",", "."))
-    if (isNaN(valueY) || valueY < -3.0 || valueY > 5.0) {
+    if (isNaN(valueY) || valueY <= -3.0 || valueY >= 5.0) {
         error('Некорректное значение Y')
         return false
     }

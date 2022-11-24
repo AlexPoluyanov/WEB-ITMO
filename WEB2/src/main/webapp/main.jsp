@@ -5,8 +5,6 @@
 <!DOCTYPE html>
 <html  lang="ru">
 <head>
-
-
     <meta charset="UTF-8">
     <title>Web | Lab #2</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,7 +84,7 @@
 <div class="plot">
     <svg height="300" width="300">
         <rect class="plot_part" x="50" y="100" height="50" width="100"></rect>
-        <path class="plot_part" d="M150 150 L 270 150 C 270 80 220 30 150 30 L Z"></path>
+        <path class="plot_part" d="M150 150 L 250 150 C 250 80 200 50 150 50 L Z"></path>
         <polygon class="plot_part" points="100,150 150,150 150,200"></polygon>
         <line stroke="black" x1="0" x2="300" y1="150" y2="150"></line>
         <line stroke="black" x1="150" x2="150" y1="0" y2="300"></line>
@@ -153,6 +151,15 @@
     </div>
     <br>
     © 2022 Poluyanov Alex. All rights reserved.
+    <br>
+    <script>$(document).ready(function() {
+        $(".main_form").keydown(function(event){
+            if(event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+            }
+        });
+    });</script>
 <script src="js/main.js"></script>
 <script src="js/plot.js"></script>
 <script src="js/requester.js"></script>

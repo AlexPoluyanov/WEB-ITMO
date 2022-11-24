@@ -33,5 +33,5 @@ function createPointer(x, y, color) {
 function isOnPlot(x, y, r) {
     return (x <= 0 && x >= (-r / 2) && y <= 0 && y >= -r/2 &&   2*x + 2*y >= -r)|| //triangle
         (x <= 0 && x >= -r && y >= 0 && y <= (r/2)) || //rectangle
-        (x >= 0 && y >= 0 && x**2 + y**2 <= (r)**2); //circle
+        (x >= 0 && y >= 0 && x**2 + y**2 <= r**2); //circle
 }
