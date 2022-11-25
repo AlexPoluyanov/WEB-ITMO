@@ -51,8 +51,8 @@ public class AreaCheckServlet extends HttpServlet {
     private boolean validate(Point point) {
         double x = point.getX(), y = point.getY();
         return (point.isClicked() || ((x % 1 == 0 && x >= -3 && x <= 5) &&
-                (y >= -3 && y <= 5))) &&
-                List.of(1.0, 1.5, 2.0, 2.5, 3.0).contains(point.getR());
+                (y > -3 && y < 5))) &&
+                List.of(1.0, 2.0, 3.0, 4.0, 5.0).contains(point.getR());
     }
 
     private boolean isOnPlot(Point point) {
