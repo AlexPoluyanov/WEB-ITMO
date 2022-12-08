@@ -56,7 +56,7 @@
         <div class="input">
             <label for="value_Y">Введите значение Y</label>
             <br>
-            <input id="value_Y" type="text" maxlength="6"
+            <input id="value_Y" type="text" maxlength="5"
                    placeholder="Введите число в диапазоне (-3;5)" size="30">
             <br>
         </div>

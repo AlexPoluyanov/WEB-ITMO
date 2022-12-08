@@ -22,9 +22,9 @@ public class Result implements Serializable {
         return String.format("""
                 <tr>
                     <td>%s</td>
-                    <td>%.2f</td>
-                    <td>%.2f</td>
-                    <td>%.2f</td>
+                    <td>%.3f</td>
+                    <td>%.3f</td>
+                    <td>%.3f</td>
                     <td>%s</td>
                     <td>%s</td>
                     <td>%s</td>
