@@ -1,0 +1,27 @@
+.form-container {
+  display: inline-block;
+  margin: 16px auto;
+  padding: 0 16px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.text-field {
+  display: inline-block;
+  margin: 0 0 16px 0;
+  text-align: left;
+  border-radius: 25px;
+}
+
+.text-field__label::after {
+  content: "\a";
+  white-space: pre;
+}
+
+.register-field {
+  margin-top: 5px;
+}
+
+.register-label {
+  font-size: 14px;
+}

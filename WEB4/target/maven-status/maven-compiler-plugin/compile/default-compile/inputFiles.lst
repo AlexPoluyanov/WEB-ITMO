@@ -1,0 +1,17 @@
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\security\jwt\JwtUtils.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\security\jwt\AuthTokenFilterJwt.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\security\WebSecurityConfig.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\controllers\HomeController.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\repositories\EntryRepository.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\controllers\EntriesController.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\entities\Entry.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\repositories\UserRepository.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\DTO\JwtDTO.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\DTO\UserDTO.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\DTO\EntryDTO.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\Application.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\security\services\UserService.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\entities\Role.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\controllers\AuthorizationController.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\entities\User.java
+C:\Users\User\Desktop\web-lab4\src\main\java\alex\weblab4\security\jwt\AuthEntryPointJwt.java
